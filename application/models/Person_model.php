@@ -27,6 +27,12 @@ class Person_model extends CI_Model
         $this->db->insert($this->table, $data);
         return $this->db->insert_id();
     }
+
+    public function update($where, $data)
+    {
+        $this->db->update($this->table, $data, $where);
+        return $this->db->affected_rows();
+    }
 }
 
 /* End of file Person_model.php */

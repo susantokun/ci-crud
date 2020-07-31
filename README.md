@@ -2,7 +2,7 @@
 
 ### Features
 - Create - Input Data
-- Read - Menampilkan Data
+- Read - Menampilkan Data (get all & get by id)
 - Update - Ubah Data
 - Delete - Hapus Data
 - Tutorial https://www.susantokun.com/category/tutorial-crud-codeigniter/

@@ -59,6 +59,12 @@ class Person extends CI_Controller
         $data['person'] = $this->Person_model->get_by_id($id);
         $this->load->view('v_detail', $data);
     }
+
+    public function delete($id)
+    {
+        $this->Person_model->delete($id);
+        redirect('person');
+    }
 }
 
 /* End of file Person.php */

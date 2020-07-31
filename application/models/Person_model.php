@@ -7,6 +7,21 @@ class Person_model extends CI_Model
     private $table = 'tbl_persons';
     private $id = 'tbl_persons.id';
 
+    public function get_by_id($id)
+    {
+        $this->db->from($this->table);
+        $this->db->where($this->id, $id);
+        $query = $this->db->get();
+        return $query->row();
+    }
+
+    public function get_all()
+    {
+        $this->db->from($this->table);
+        $query = $this->db->get();
+        return $query->result();
+    }
+
     public function insert($data)
     {
         $this->db->insert($this->table, $data);

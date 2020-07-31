@@ -10,6 +10,12 @@ class Person extends CI_Controller
         $this->load->model('Person_model');
     }
 
+    public function index()
+    {
+        $data['persons'] = $this->Person_model->get_all();
+        $this->load->view('v_list', $data);
+    }
+
     public function add()
     {
         $this->load->view('v_create');
@@ -25,7 +31,13 @@ class Person extends CI_Controller
           'address' => $address
         );
         $this->Person_model->insert($data);
-        redirect('person/add');
+        redirect('person');
+    }
+
+    public function detail($id)
+    {
+        $data['person'] = $this->Person_model->get_by_id($id);
+        $this->load->view('v_detail', $data);
     }
 }
 

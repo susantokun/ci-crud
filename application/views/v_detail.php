@@ -22,26 +22,22 @@
 <body>
   <div class="header">
     <h1>Tutorial CRUD CodeIgniter - SUSANTOKUN</h1>
-    <h3>Create - Tambah Data</h3>
+    <h3>Detail Data #<?=$person->id?></h3>
   </div>
   <div class="content">
     <?php echo anchor('person','Back'); ?>
-    <form action="<?=base_url('person/create')?>" method="post">
-      <table>
-        <tr>
-          <td>Name</td>
-          <td><input type="text" name="name"></td>
-        </tr>
-        <tr>
-          <td>Address</td>
-          <td><input type="text" name="address"></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td><input type="submit" value="Submit"></td>
-        </tr>
-      </table>
-    </form>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>:</td>
+        <td><?=$person->name?></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td>:</td>
+        <td><?=$person->address?></td>
+      </tr>
+    </table>
   </div>
 </body>
 

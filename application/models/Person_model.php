@@ -43,5 +43,3 @@ class Person_model extends CI_Model
 }
 
 /* End of file Person_model.php */
-
-

@@ -9,13 +9,16 @@
     .header {
       text-align: center;
     }
+
     .content {
       text-align: center
     }
+
     .content table {
       margin: 6px auto;
       text-align: left;
     }
+
   </style>
 </head>
 
